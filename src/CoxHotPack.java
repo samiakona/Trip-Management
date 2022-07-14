@@ -29,7 +29,7 @@ public class CoxHotPack extends javax.swing.JFrame {
         jButton6 = new javax.swing.JButton();
         jButton5 = new javax.swing.JButton();
         jButton3 = new javax.swing.JButton();
-        jButton4 = new javax.swing.JButton();
+        back = new javax.swing.JButton();
         jLabel10 = new javax.swing.JLabel();
         jLabel9 = new javax.swing.JLabel();
         jLabel8 = new javax.swing.JLabel();
@@ -58,11 +58,16 @@ public class CoxHotPack extends javax.swing.JFrame {
         jButton3.setText("Add");
         getContentPane().add(jButton3, new org.netbeans.lib.awtextra.AbsoluteConstraints(970, 500, -1, -1));
 
-        jButton4.setBackground(new java.awt.Color(0, 0, 0));
-        jButton4.setFont(new java.awt.Font("Times New Roman", 1, 24)); // NOI18N
-        jButton4.setForeground(new java.awt.Color(255, 153, 51));
-        jButton4.setText("Back");
-        getContentPane().add(jButton4, new org.netbeans.lib.awtextra.AbsoluteConstraints(805, 500, -1, -1));
+        back.setBackground(new java.awt.Color(0, 0, 0));
+        back.setFont(new java.awt.Font("Times New Roman", 1, 24)); // NOI18N
+        back.setForeground(new java.awt.Color(255, 153, 51));
+        back.setText("Back");
+        back.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                backMouseClicked(evt);
+            }
+        });
+        getContentPane().add(back, new org.netbeans.lib.awtextra.AbsoluteConstraints(805, 500, -1, -1));
 
         jLabel10.setFont(new java.awt.Font("Times New Roman", 1, 24)); // NOI18N
         jLabel10.setForeground(new java.awt.Color(255, 153, 51));
@@ -111,6 +116,12 @@ public class CoxHotPack extends javax.swing.JFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
+    private void backMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_backMouseClicked
+        // TODO add your handling code here:
+        HotPackage hot_pack = new HotPackage();
+        hot_pack.setVisible(true);
+    }//GEN-LAST:event_backMouseClicked
+
     /**
      * @param args the command line arguments
      */
@@ -147,8 +158,8 @@ public class CoxHotPack extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton back;
     private javax.swing.JButton jButton3;
-    private javax.swing.JButton jButton4;
     private javax.swing.JButton jButton5;
     private javax.swing.JButton jButton6;
     private javax.swing.JLabel jLabel1;

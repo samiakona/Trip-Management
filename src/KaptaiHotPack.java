@@ -29,7 +29,7 @@ public class KaptaiHotPack extends javax.swing.JFrame {
         jButton6 = new javax.swing.JButton();
         jButton5 = new javax.swing.JButton();
         jButton4 = new javax.swing.JButton();
-        jButton3 = new javax.swing.JButton();
+        back = new javax.swing.JButton();
         jLabel7 = new javax.swing.JLabel();
         jLabel6 = new javax.swing.JLabel();
         jLabel5 = new javax.swing.JLabel();
@@ -60,11 +60,21 @@ public class KaptaiHotPack extends javax.swing.JFrame {
         });
         getContentPane().add(jButton4, new org.netbeans.lib.awtextra.AbsoluteConstraints(840, 560, -1, -1));
 
-        jButton3.setBackground(new java.awt.Color(0, 0, 0));
-        jButton3.setFont(new java.awt.Font("Times New Roman", 1, 24)); // NOI18N
-        jButton3.setForeground(new java.awt.Color(255, 255, 0));
-        jButton3.setText("Back");
-        getContentPane().add(jButton3, new org.netbeans.lib.awtextra.AbsoluteConstraints(660, 560, -1, -1));
+        back.setBackground(new java.awt.Color(0, 0, 0));
+        back.setFont(new java.awt.Font("Times New Roman", 1, 24)); // NOI18N
+        back.setForeground(new java.awt.Color(255, 255, 0));
+        back.setText("Back");
+        back.addMouseMotionListener(new java.awt.event.MouseMotionAdapter() {
+            public void mouseDragged(java.awt.event.MouseEvent evt) {
+                backMouseDragged(evt);
+            }
+        });
+        back.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                backMouseClicked(evt);
+            }
+        });
+        getContentPane().add(back, new org.netbeans.lib.awtextra.AbsoluteConstraints(660, 560, -1, -1));
 
         jLabel7.setFont(new java.awt.Font("Times New Roman", 1, 24)); // NOI18N
         jLabel7.setForeground(new java.awt.Color(255, 255, 0));
@@ -108,6 +118,16 @@ public class KaptaiHotPack extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_jButton4ActionPerformed
 
+    private void backMouseDragged(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_backMouseDragged
+        // TODO add your handling code here:
+    }//GEN-LAST:event_backMouseDragged
+
+    private void backMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_backMouseClicked
+        // TODO add your handling code here:
+        HotPackage hot_pack = new HotPackage();
+        hot_pack.setVisible(true);
+    }//GEN-LAST:event_backMouseClicked
+
     /**
      * @param args the command line arguments
      */
@@ -144,7 +164,7 @@ public class KaptaiHotPack extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton jButton3;
+    private javax.swing.JButton back;
     private javax.swing.JButton jButton4;
     private javax.swing.JButton jButton5;
     private javax.swing.JButton jButton6;

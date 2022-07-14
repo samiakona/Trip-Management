@@ -26,47 +26,113 @@ public class HotPackage extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        jButton1 = new javax.swing.JButton();
-        jButton2 = new javax.swing.JButton();
-        jButton3 = new javax.swing.JButton();
-        jButton4 = new javax.swing.JButton();
-        jButton5 = new javax.swing.JButton();
-        jButton6 = new javax.swing.JButton();
-        jLabel1 = new javax.swing.JLabel();
+        cox_hot_pack = new javax.swing.JButton();
+        kaptai_hot_pack = new javax.swing.JButton();
+        saint_hot_pack = new javax.swing.JButton();
+        sundarban_hot_pack = new javax.swing.JButton();
+        bandarban_hot_pack = new javax.swing.JButton();
+        sajek_hot_pack = new javax.swing.JButton();
+        background_cover = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        jButton1.setBackground(new java.awt.Color(0, 0, 0));
-        jButton1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/image/cox's button.jpg"))); // NOI18N
-        getContentPane().add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(370, 240, 142, -1));
+        cox_hot_pack.setBackground(new java.awt.Color(0, 0, 0));
+        cox_hot_pack.setIcon(new javax.swing.ImageIcon(getClass().getResource("/image/cox's button.jpg"))); // NOI18N
+        cox_hot_pack.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                cox_hot_packActionPerformed(evt);
+            }
+        });
+        getContentPane().add(cox_hot_pack, new org.netbeans.lib.awtextra.AbsoluteConstraints(370, 240, 142, -1));
 
-        jButton2.setBackground(new java.awt.Color(0, 0, 0));
-        jButton2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/image/kaptai button.jpg"))); // NOI18N
-        getContentPane().add(jButton2, new org.netbeans.lib.awtextra.AbsoluteConstraints(370, 430, 141, -1));
+        kaptai_hot_pack.setBackground(new java.awt.Color(0, 0, 0));
+        kaptai_hot_pack.setIcon(new javax.swing.ImageIcon(getClass().getResource("/image/kaptai button.jpg"))); // NOI18N
+        kaptai_hot_pack.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                kaptai_hot_packActionPerformed(evt);
+            }
+        });
+        getContentPane().add(kaptai_hot_pack, new org.netbeans.lib.awtextra.AbsoluteConstraints(370, 430, 141, -1));
 
-        jButton3.setBackground(new java.awt.Color(0, 0, 0));
-        jButton3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/image/saint button.jpg"))); // NOI18N
-        getContentPane().add(jButton3, new org.netbeans.lib.awtextra.AbsoluteConstraints(610, 240, 140, -1));
+        saint_hot_pack.setBackground(new java.awt.Color(0, 0, 0));
+        saint_hot_pack.setIcon(new javax.swing.ImageIcon(getClass().getResource("/image/saint button.jpg"))); // NOI18N
+        saint_hot_pack.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                saint_hot_packActionPerformed(evt);
+            }
+        });
+        getContentPane().add(saint_hot_pack, new org.netbeans.lib.awtextra.AbsoluteConstraints(610, 240, 140, -1));
 
-        jButton4.setBackground(new java.awt.Color(0, 0, 0));
-        jButton4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/image/sundarban button.jpg"))); // NOI18N
-        getContentPane().add(jButton4, new org.netbeans.lib.awtextra.AbsoluteConstraints(620, 430, 140, -1));
+        sundarban_hot_pack.setBackground(new java.awt.Color(0, 0, 0));
+        sundarban_hot_pack.setIcon(new javax.swing.ImageIcon(getClass().getResource("/image/sundarban button.jpg"))); // NOI18N
+        sundarban_hot_pack.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                sundarban_hot_packActionPerformed(evt);
+            }
+        });
+        getContentPane().add(sundarban_hot_pack, new org.netbeans.lib.awtextra.AbsoluteConstraints(620, 430, 140, -1));
 
-        jButton5.setBackground(new java.awt.Color(0, 0, 0));
-        jButton5.setIcon(new javax.swing.ImageIcon(getClass().getResource("/image/bandarban button.jpg"))); // NOI18N
-        getContentPane().add(jButton5, new org.netbeans.lib.awtextra.AbsoluteConstraints(860, 240, 140, -1));
+        bandarban_hot_pack.setBackground(new java.awt.Color(0, 0, 0));
+        bandarban_hot_pack.setIcon(new javax.swing.ImageIcon(getClass().getResource("/image/bandarban button.jpg"))); // NOI18N
+        bandarban_hot_pack.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                bandarban_hot_packActionPerformed(evt);
+            }
+        });
+        getContentPane().add(bandarban_hot_pack, new org.netbeans.lib.awtextra.AbsoluteConstraints(860, 240, 140, -1));
 
-        jButton6.setBackground(new java.awt.Color(0, 0, 0));
-        jButton6.setIcon(new javax.swing.ImageIcon(getClass().getResource("/image/sajek button.jpg"))); // NOI18N
-        getContentPane().add(jButton6, new org.netbeans.lib.awtextra.AbsoluteConstraints(860, 430, 140, -1));
+        sajek_hot_pack.setBackground(new java.awt.Color(0, 0, 0));
+        sajek_hot_pack.setIcon(new javax.swing.ImageIcon(getClass().getResource("/image/sajek button.jpg"))); // NOI18N
+        sajek_hot_pack.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                sajek_hot_packActionPerformed(evt);
+            }
+        });
+        getContentPane().add(sajek_hot_pack, new org.netbeans.lib.awtextra.AbsoluteConstraints(860, 430, 140, -1));
 
-        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/image/Hotpackage.jpg"))); // NOI18N
-        jLabel1.setText("jLabel1");
-        getContentPane().add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, -1, -1));
+        background_cover.setIcon(new javax.swing.ImageIcon(getClass().getResource("/image/Hotpackage.jpg"))); // NOI18N
+        background_cover.setText("jLabel1");
+        getContentPane().add(background_cover, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, -1, -1));
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
+
+    private void cox_hot_packActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cox_hot_packActionPerformed
+        // TODO add your handling code here:
+        CoxHotPack cox_hot_pack = new CoxHotPack();
+        cox_hot_pack.setVisible(true);
+    }//GEN-LAST:event_cox_hot_packActionPerformed
+
+    private void saint_hot_packActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_saint_hot_packActionPerformed
+        // TODO add your handling code here:
+        SaintHotPack saint_hot_pack = new SaintHotPack();
+        saint_hot_pack.setVisible(true);
+    }//GEN-LAST:event_saint_hot_packActionPerformed
+
+    private void bandarban_hot_packActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bandarban_hot_packActionPerformed
+        // TODO add your handling code here:
+        BandarbanHotPack bandarban_hot_pack = new BandarbanHotPack();
+        bandarban_hot_pack.setVisible(true);
+    }//GEN-LAST:event_bandarban_hot_packActionPerformed
+
+    private void kaptai_hot_packActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_kaptai_hot_packActionPerformed
+        // TODO add your handling code here:
+        KaptaiHotPack kaptai_hot_pack = new KaptaiHotPack();
+        kaptai_hot_pack.setVisible(true);
+    }//GEN-LAST:event_kaptai_hot_packActionPerformed
+
+    private void sundarban_hot_packActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_sundarban_hot_packActionPerformed
+        // TODO add your handling code here:
+        SundarbanHotPack sundarban_hot_pack = new SundarbanHotPack();
+        sundarban_hot_pack.setVisible(true);
+    }//GEN-LAST:event_sundarban_hot_packActionPerformed
+
+    private void sajek_hot_packActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_sajek_hot_packActionPerformed
+        // TODO add your handling code here:
+        SajekHotPack sajek_hot_pack = new SajekHotPack();
+        sajek_hot_pack.setVisible(true);
+    }//GEN-LAST:event_sajek_hot_packActionPerformed
 
     /**
      * @param args the command line arguments
@@ -104,12 +170,12 @@ public class HotPackage extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton jButton1;
-    private javax.swing.JButton jButton2;
-    private javax.swing.JButton jButton3;
-    private javax.swing.JButton jButton4;
-    private javax.swing.JButton jButton5;
-    private javax.swing.JButton jButton6;
-    private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel background_cover;
+    private javax.swing.JButton bandarban_hot_pack;
+    private javax.swing.JButton cox_hot_pack;
+    private javax.swing.JButton kaptai_hot_pack;
+    private javax.swing.JButton saint_hot_pack;
+    private javax.swing.JButton sajek_hot_pack;
+    private javax.swing.JButton sundarban_hot_pack;
     // End of variables declaration//GEN-END:variables
 }

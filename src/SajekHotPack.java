@@ -26,7 +26,7 @@ public class SajekHotPack extends javax.swing.JFrame {
     private void initComponents() {
 
         jButton4 = new javax.swing.JButton();
-        jButton3 = new javax.swing.JButton();
+        back = new javax.swing.JButton();
         jLabel7 = new javax.swing.JLabel();
         jLabel6 = new javax.swing.JLabel();
         jLabel5 = new javax.swing.JLabel();
@@ -46,11 +46,16 @@ public class SajekHotPack extends javax.swing.JFrame {
         jButton4.setText("Add");
         getContentPane().add(jButton4, new org.netbeans.lib.awtextra.AbsoluteConstraints(1070, 540, 80, -1));
 
-        jButton3.setBackground(new java.awt.Color(0, 0, 0));
-        jButton3.setFont(new java.awt.Font("Times New Roman", 1, 24)); // NOI18N
-        jButton3.setForeground(new java.awt.Color(255, 255, 255));
-        jButton3.setText("Back");
-        getContentPane().add(jButton3, new org.netbeans.lib.awtextra.AbsoluteConstraints(850, 540, -1, -1));
+        back.setBackground(new java.awt.Color(0, 0, 0));
+        back.setFont(new java.awt.Font("Times New Roman", 1, 24)); // NOI18N
+        back.setForeground(new java.awt.Color(255, 255, 255));
+        back.setText("Back");
+        back.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                backMouseClicked(evt);
+            }
+        });
+        getContentPane().add(back, new org.netbeans.lib.awtextra.AbsoluteConstraints(850, 540, -1, -1));
 
         jLabel7.setBackground(new java.awt.Color(255, 255, 255));
         jLabel7.setFont(new java.awt.Font("Times New Roman", 1, 24)); // NOI18N
@@ -97,6 +102,12 @@ public class SajekHotPack extends javax.swing.JFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
+    private void backMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_backMouseClicked
+        // TODO add your handling code here:
+        HotPackage hot_pack = new HotPackage();
+        hot_pack.setVisible(true);
+    }//GEN-LAST:event_backMouseClicked
+
     /**
      * @param args the command line arguments
      */
@@ -133,9 +144,9 @@ public class SajekHotPack extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton back;
     private javax.swing.JButton jButton1;
     private javax.swing.JButton jButton2;
-    private javax.swing.JButton jButton3;
     private javax.swing.JButton jButton4;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;

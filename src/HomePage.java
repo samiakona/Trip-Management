@@ -28,11 +28,11 @@ public class HomePage extends javax.swing.JFrame {
 
         jLabel2 = new javax.swing.JLabel();
         jLabel3 = new javax.swing.JLabel();
-        jButton1 = new javax.swing.JButton();
-        jButton4 = new javax.swing.JButton();
-        jButton5 = new javax.swing.JButton();
+        hot_package = new javax.swing.JButton();
+        trip_forerign = new javax.swing.JButton();
+        make_own_trip = new javax.swing.JButton();
         jButton6 = new javax.swing.JButton();
-        jButton3 = new javax.swing.JButton();
+        classic_package = new javax.swing.JButton();
         jButton2 = new javax.swing.JButton();
         jLabel1 = new javax.swing.JLabel();
 
@@ -44,40 +44,40 @@ public class HomePage extends javax.swing.JFrame {
         getContentPane().add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(670, 70, -1, -1));
         getContentPane().add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(620, 190, -1, -1));
 
-        jButton1.setBackground(new java.awt.Color(0, 0, 0));
-        jButton1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/image/hot-package-logo-symbol-icon-260nw-1796112262.jpg"))); // NOI18N
-        jButton1.addActionListener(new java.awt.event.ActionListener() {
+        hot_package.setBackground(new java.awt.Color(0, 0, 0));
+        hot_package.setIcon(new javax.swing.ImageIcon(getClass().getResource("/image/hot-package-logo-symbol-icon-260nw-1796112262.jpg"))); // NOI18N
+        hot_package.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton1ActionPerformed(evt);
+                hot_packageActionPerformed(evt);
             }
         });
-        getContentPane().add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(310, 150, 140, -1));
+        getContentPane().add(hot_package, new org.netbeans.lib.awtextra.AbsoluteConstraints(310, 150, 140, -1));
 
-        jButton4.setBackground(new java.awt.Color(0, 0, 0));
-        jButton4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/image/new.jpg"))); // NOI18N
-        getContentPane().add(jButton4, new org.netbeans.lib.awtextra.AbsoluteConstraints(300, 380, 140, -1));
+        trip_forerign.setBackground(new java.awt.Color(0, 0, 0));
+        trip_forerign.setIcon(new javax.swing.ImageIcon(getClass().getResource("/image/new.jpg"))); // NOI18N
+        getContentPane().add(trip_forerign, new org.netbeans.lib.awtextra.AbsoluteConstraints(300, 380, 140, -1));
 
-        jButton5.setBackground(new java.awt.Color(0, 0, 0));
-        jButton5.setIcon(new javax.swing.ImageIcon(getClass().getResource("/image/make ur own.jpg"))); // NOI18N
-        jButton5.addActionListener(new java.awt.event.ActionListener() {
+        make_own_trip.setBackground(new java.awt.Color(0, 0, 0));
+        make_own_trip.setIcon(new javax.swing.ImageIcon(getClass().getResource("/image/make ur own.jpg"))); // NOI18N
+        make_own_trip.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton5ActionPerformed(evt);
+                make_own_tripActionPerformed(evt);
             }
         });
-        getContentPane().add(jButton5, new org.netbeans.lib.awtextra.AbsoluteConstraints(640, 380, 140, -1));
+        getContentPane().add(make_own_trip, new org.netbeans.lib.awtextra.AbsoluteConstraints(640, 380, 140, -1));
 
         jButton6.setBackground(new java.awt.Color(0, 0, 0));
         jButton6.setIcon(new javax.swing.ImageIcon(getClass().getResource("/image/Setting.jpg"))); // NOI18N
         getContentPane().add(jButton6, new org.netbeans.lib.awtextra.AbsoluteConstraints(1010, 380, 140, -1));
 
-        jButton3.setBackground(new java.awt.Color(0, 0, 0));
-        jButton3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/image/classic.jpg"))); // NOI18N
-        jButton3.addActionListener(new java.awt.event.ActionListener() {
+        classic_package.setBackground(new java.awt.Color(0, 0, 0));
+        classic_package.setIcon(new javax.swing.ImageIcon(getClass().getResource("/image/classic.jpg"))); // NOI18N
+        classic_package.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton3ActionPerformed(evt);
+                classic_packageActionPerformed(evt);
             }
         });
-        getContentPane().add(jButton3, new org.netbeans.lib.awtextra.AbsoluteConstraints(640, 150, 140, 150));
+        getContentPane().add(classic_package, new org.netbeans.lib.awtextra.AbsoluteConstraints(640, 150, 140, 150));
 
         jButton2.setBackground(new java.awt.Color(0, 0, 0));
         jButton2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/image/premium.jpg"))); // NOI18N
@@ -89,17 +89,20 @@ public class HomePage extends javax.swing.JFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+    private void hot_packageActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_hot_packageActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jButton1ActionPerformed
+        HotPackage hot_package = new HotPackage();
+        hot_package.setVisible(true);
+    }//GEN-LAST:event_hot_packageActionPerformed
 
-    private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
+    private void classic_packageActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_classic_packageActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jButton3ActionPerformed
+        // classic_package 
+    }//GEN-LAST:event_classic_packageActionPerformed
 
-    private void jButton5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton5ActionPerformed
+    private void make_own_tripActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_make_own_tripActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jButton5ActionPerformed
+    }//GEN-LAST:event_make_own_tripActionPerformed
 
     /**
      * @param args the command line arguments
@@ -137,14 +140,14 @@ public class HomePage extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton jButton1;
+    private javax.swing.JButton classic_package;
+    private javax.swing.JButton hot_package;
     private javax.swing.JButton jButton2;
-    private javax.swing.JButton jButton3;
-    private javax.swing.JButton jButton4;
-    private javax.swing.JButton jButton5;
     private javax.swing.JButton jButton6;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
+    private javax.swing.JButton make_own_trip;
+    private javax.swing.JButton trip_forerign;
     // End of variables declaration//GEN-END:variables
 }
