@@ -3,7 +3,7 @@ import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 import javax.swing.JOptionPane;
 import project.InsertUpdateDelete;
-import project.SelectQuery;
+import project.SelectUserQuery;
 
 
 /*
@@ -146,6 +146,7 @@ public class signup extends javax.swing.JFrame {
         String phone = jTextField3.getText();
         String password = jPasswordField1.getText();
         String confirm_password = jPasswordField2.getText();
+        
         if (name.equals("") || email.equals("") || phone.equals("") || password.equals("") || confirm_password.equals(""))
             JOptionPane.showMessageDialog(null, "Every Field is Required");
         else {
@@ -153,10 +154,10 @@ public class signup extends javax.swing.JFrame {
             String getQuery;
 
             getQuery = ("select * from users where email = '" + email + "';");
-            int numOfValues = SelectQuery.getData(getQuery).size();
-            System.out.println(numOfValues);
+            String findEmail = SelectUserQuery.getData(getQuery).getEmail();
+            System.out.println(findEmail);
 
-            if (numOfValues > 0) {
+            if (findEmail != null) {
                 JOptionPane.showMessageDialog(null, email+" already exits");
             } else {
                 insertQuery = ("insert into users values('" + name + "','" + email + "','" + phone + "','" + password + "','" + confirm_password + "')");
@@ -166,8 +167,8 @@ public class signup extends javax.swing.JFrame {
                 login ln = new login();
                 ln.setVisible(true);
             }
-
         }
+        
     }//GEN-LAST:event_jButton1ActionPerformed
 
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed

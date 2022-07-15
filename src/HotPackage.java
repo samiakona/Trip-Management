@@ -9,12 +9,15 @@
  * @author USer
  */
 public class HotPackage extends javax.swing.JFrame {
+    String email;
 
     /**
      * Creates new form HotPackage
      */
-    public HotPackage() {
+    public HotPackage(String _email) {
         initComponents();
+        this.email = _email;
+        helloEmail.setText("hello, "+email);
     }
 
     /**
@@ -26,6 +29,7 @@ public class HotPackage extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+        helloEmail = new javax.swing.JButton();
         cox_hot_pack = new javax.swing.JButton();
         kaptai_hot_pack = new javax.swing.JButton();
         saint_hot_pack = new javax.swing.JButton();
@@ -36,6 +40,16 @@ public class HotPackage extends javax.swing.JFrame {
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        helloEmail.setText("jButton1");
+        helloEmail.addInputMethodListener(new java.awt.event.InputMethodListener() {
+            public void caretPositionChanged(java.awt.event.InputMethodEvent evt) {
+            }
+            public void inputMethodTextChanged(java.awt.event.InputMethodEvent evt) {
+                helloEmailInputMethodTextChanged(evt);
+            }
+        });
+        getContentPane().add(helloEmail, new org.netbeans.lib.awtextra.AbsoluteConstraints(1320, 30, -1, -1));
 
         cox_hot_pack.setBackground(new java.awt.Color(0, 0, 0));
         cox_hot_pack.setIcon(new javax.swing.ImageIcon(getClass().getResource("/image/cox's button.jpg"))); // NOI18N
@@ -100,39 +114,49 @@ public class HotPackage extends javax.swing.JFrame {
 
     private void cox_hot_packActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cox_hot_packActionPerformed
         // TODO add your handling code here:
-        CoxHotPack cox_hot_pack = new CoxHotPack();
+        CoxHotPack cox_hot_pack = new CoxHotPack(email);
         cox_hot_pack.setVisible(true);
+        setVisible(false);
     }//GEN-LAST:event_cox_hot_packActionPerformed
 
     private void saint_hot_packActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_saint_hot_packActionPerformed
         // TODO add your handling code here:
-        SaintHotPack saint_hot_pack = new SaintHotPack();
+        SaintHotPack saint_hot_pack = new SaintHotPack(email);
         saint_hot_pack.setVisible(true);
+        setVisible(false);
     }//GEN-LAST:event_saint_hot_packActionPerformed
 
     private void bandarban_hot_packActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bandarban_hot_packActionPerformed
         // TODO add your handling code here:
-        BandarbanHotPack bandarban_hot_pack = new BandarbanHotPack();
+        BandarbanHotPack bandarban_hot_pack = new BandarbanHotPack(email);
         bandarban_hot_pack.setVisible(true);
+        setVisible(false);
     }//GEN-LAST:event_bandarban_hot_packActionPerformed
 
     private void kaptai_hot_packActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_kaptai_hot_packActionPerformed
         // TODO add your handling code here:
-        KaptaiHotPack kaptai_hot_pack = new KaptaiHotPack();
+        KaptaiHotPack kaptai_hot_pack = new KaptaiHotPack(email);
         kaptai_hot_pack.setVisible(true);
+        setVisible(false);
     }//GEN-LAST:event_kaptai_hot_packActionPerformed
 
     private void sundarban_hot_packActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_sundarban_hot_packActionPerformed
         // TODO add your handling code here:
-        SundarbanHotPack sundarban_hot_pack = new SundarbanHotPack();
+        SundarbanHotPack sundarban_hot_pack = new SundarbanHotPack(email);
         sundarban_hot_pack.setVisible(true);
+        setVisible(false);
     }//GEN-LAST:event_sundarban_hot_packActionPerformed
 
     private void sajek_hot_packActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_sajek_hot_packActionPerformed
         // TODO add your handling code here:
-        SajekHotPack sajek_hot_pack = new SajekHotPack();
+        SajekHotPack sajek_hot_pack = new SajekHotPack(email);
         sajek_hot_pack.setVisible(true);
+        setVisible(false);
     }//GEN-LAST:event_sajek_hot_packActionPerformed
+
+    private void helloEmailInputMethodTextChanged(java.awt.event.InputMethodEvent evt) {//GEN-FIRST:event_helloEmailInputMethodTextChanged
+        // TODO add your handling code here:
+    }//GEN-LAST:event_helloEmailInputMethodTextChanged
 
     /**
      * @param args the command line arguments
@@ -164,7 +188,7 @@ public class HotPackage extends javax.swing.JFrame {
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                new HotPackage().setVisible(true);
+                new HotPackage("").setVisible(true);
             }
         });
     }
@@ -173,6 +197,7 @@ public class HotPackage extends javax.swing.JFrame {
     private javax.swing.JLabel background_cover;
     private javax.swing.JButton bandarban_hot_pack;
     private javax.swing.JButton cox_hot_pack;
+    private javax.swing.JButton helloEmail;
     private javax.swing.JButton kaptai_hot_pack;
     private javax.swing.JButton saint_hot_pack;
     private javax.swing.JButton sajek_hot_pack;

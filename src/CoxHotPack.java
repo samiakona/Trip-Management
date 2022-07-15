@@ -1,3 +1,9 @@
+
+import javax.swing.JOptionPane;
+import model.User;
+import project.InsertBooked;
+import project.SelectUserQuery;
+
 /*
  * To change this license header, choose License Headers in Project Properties.
  * To change this template file, choose Tools | Templates
@@ -9,12 +15,15 @@
  * @author USer
  */
 public class CoxHotPack extends javax.swing.JFrame {
+    String email;
 
     /**
      * Creates new form CoxHotPack
      */
-    public CoxHotPack() {
+    public CoxHotPack(String _email) {
         initComponents();
+        this.email = _email;
+        helloEmail.setText("hello, "+email);
     }
 
     /**
@@ -26,37 +35,63 @@ public class CoxHotPack extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        jButton6 = new javax.swing.JButton();
-        jButton5 = new javax.swing.JButton();
-        jButton3 = new javax.swing.JButton();
+        helloEmail = new javax.swing.JButton();
+        picture1 = new javax.swing.JLabel();
+        picture2 = new javax.swing.JLabel();
+        picture3 = new javax.swing.JLabel();
+        picture4 = new javax.swing.JLabel();
+        picture5 = new javax.swing.JLabel();
+        forward = new javax.swing.JButton();
+        backward = new javax.swing.JButton();
+        add = new javax.swing.JButton();
         back = new javax.swing.JButton();
-        jLabel10 = new javax.swing.JLabel();
+        hotelNameValue = new javax.swing.JLabel();
         jLabel9 = new javax.swing.JLabel();
-        jLabel8 = new javax.swing.JLabel();
+        costValue = new javax.swing.JLabel();
         jLabel7 = new javax.swing.JLabel();
-        jLabel6 = new javax.swing.JLabel();
+        durationValue = new javax.swing.JLabel();
         jLabel5 = new javax.swing.JLabel();
-        jLabel4 = new javax.swing.JLabel();
-        jLabel3 = new javax.swing.JLabel();
-        jLabel2 = new javax.swing.JLabel();
-        jLabel1 = new javax.swing.JLabel();
+        background = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        jButton6.setBackground(new java.awt.Color(0, 0, 0));
-        jButton6.setIcon(new javax.swing.ImageIcon(getClass().getResource("/image/forward.jpg"))); // NOI18N
-        getContentPane().add(jButton6, new org.netbeans.lib.awtextra.AbsoluteConstraints(260, 380, 100, 40));
+        helloEmail.setText("jButton1");
+        getContentPane().add(helloEmail, new org.netbeans.lib.awtextra.AbsoluteConstraints(1130, 30, -1, -1));
 
-        jButton5.setBackground(new java.awt.Color(0, 0, 0));
-        jButton5.setIcon(new javax.swing.ImageIcon(getClass().getResource("/image/back.jpg"))); // NOI18N
-        getContentPane().add(jButton5, new org.netbeans.lib.awtextra.AbsoluteConstraints(76, 380, 100, 40));
+        picture1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/image/picture1.jpg"))); // NOI18N
+        getContentPane().add(picture1, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 40, 410, 320));
 
-        jButton3.setBackground(new java.awt.Color(0, 0, 0));
-        jButton3.setFont(new java.awt.Font("Times New Roman", 1, 24)); // NOI18N
-        jButton3.setForeground(new java.awt.Color(255, 153, 51));
-        jButton3.setText("Add");
-        getContentPane().add(jButton3, new org.netbeans.lib.awtextra.AbsoluteConstraints(970, 500, -1, -1));
+        picture2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/image/picture2.jpg"))); // NOI18N
+        getContentPane().add(picture2, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 50, -1, -1));
+
+        picture3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/image/picture3.jpg"))); // NOI18N
+        getContentPane().add(picture3, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 50, -1, -1));
+
+        picture4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/image/picture4.jpg"))); // NOI18N
+        getContentPane().add(picture4, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 50, -1, -1));
+
+        picture5.setIcon(new javax.swing.ImageIcon(getClass().getResource("/image/picture5.jpg"))); // NOI18N
+        getContentPane().add(picture5, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 50, -1, -1));
+
+        forward.setBackground(new java.awt.Color(0, 0, 0));
+        forward.setIcon(new javax.swing.ImageIcon(getClass().getResource("/image/forward.jpg"))); // NOI18N
+        getContentPane().add(forward, new org.netbeans.lib.awtextra.AbsoluteConstraints(260, 380, 100, 40));
+
+        backward.setBackground(new java.awt.Color(0, 0, 0));
+        backward.setIcon(new javax.swing.ImageIcon(getClass().getResource("/image/back.jpg"))); // NOI18N
+        getContentPane().add(backward, new org.netbeans.lib.awtextra.AbsoluteConstraints(76, 380, 100, 40));
+
+        add.setBackground(new java.awt.Color(0, 0, 0));
+        add.setFont(new java.awt.Font("Times New Roman", 1, 24)); // NOI18N
+        add.setForeground(new java.awt.Color(255, 153, 51));
+        add.setText("Add");
+        add.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                addActionPerformed(evt);
+            }
+        });
+        getContentPane().add(add, new org.netbeans.lib.awtextra.AbsoluteConstraints(970, 500, -1, -1));
 
         back.setBackground(new java.awt.Color(0, 0, 0));
         back.setFont(new java.awt.Font("Times New Roman", 1, 24)); // NOI18N
@@ -69,10 +104,10 @@ public class CoxHotPack extends javax.swing.JFrame {
         });
         getContentPane().add(back, new org.netbeans.lib.awtextra.AbsoluteConstraints(805, 500, -1, -1));
 
-        jLabel10.setFont(new java.awt.Font("Times New Roman", 1, 24)); // NOI18N
-        jLabel10.setForeground(new java.awt.Color(255, 153, 51));
-        jLabel10.setText("Hotel Sea Crown");
-        getContentPane().add(jLabel10, new org.netbeans.lib.awtextra.AbsoluteConstraints(940, 400, -1, -1));
+        hotelNameValue.setFont(new java.awt.Font("Times New Roman", 1, 24)); // NOI18N
+        hotelNameValue.setForeground(new java.awt.Color(255, 153, 51));
+        hotelNameValue.setText("Hotel Sea Crown");
+        getContentPane().add(hotelNameValue, new org.netbeans.lib.awtextra.AbsoluteConstraints(940, 400, -1, -1));
 
         jLabel9.setFont(new java.awt.Font("Times New Roman", 1, 24)); // NOI18N
         jLabel9.setForeground(new java.awt.Color(255, 153, 51));
@@ -80,47 +115,66 @@ public class CoxHotPack extends javax.swing.JFrame {
         jLabel9.setToolTipText("");
         getContentPane().add(jLabel9, new org.netbeans.lib.awtextra.AbsoluteConstraints(750, 400, 190, -1));
 
-        jLabel8.setFont(new java.awt.Font("Times New Roman", 1, 24)); // NOI18N
-        jLabel8.setForeground(new java.awt.Color(255, 153, 51));
-        jLabel8.setText("12000 TK");
-        getContentPane().add(jLabel8, new org.netbeans.lib.awtextra.AbsoluteConstraints(940, 340, 130, -1));
+        costValue.setFont(new java.awt.Font("Times New Roman", 1, 24)); // NOI18N
+        costValue.setForeground(new java.awt.Color(255, 153, 51));
+        costValue.setText("12000");
+        getContentPane().add(costValue, new org.netbeans.lib.awtextra.AbsoluteConstraints(940, 340, 130, -1));
 
         jLabel7.setFont(new java.awt.Font("Times New Roman", 1, 24)); // NOI18N
         jLabel7.setForeground(new java.awt.Color(255, 153, 51));
         jLabel7.setText("Amount of Cost  :");
         getContentPane().add(jLabel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(750, 340, -1, -1));
 
-        jLabel6.setFont(new java.awt.Font("Times New Roman", 1, 24)); // NOI18N
-        jLabel6.setForeground(new java.awt.Color(255, 153, 51));
-        jLabel6.setText("3 days, 2 nights");
-        getContentPane().add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(940, 290, -1, -1));
+        durationValue.setFont(new java.awt.Font("Times New Roman", 1, 24)); // NOI18N
+        durationValue.setForeground(new java.awt.Color(255, 153, 51));
+        durationValue.setText("3 days, 2 nights");
+        getContentPane().add(durationValue, new org.netbeans.lib.awtextra.AbsoluteConstraints(940, 290, -1, -1));
 
         jLabel5.setFont(new java.awt.Font("Times New Roman", 1, 24)); // NOI18N
         jLabel5.setForeground(new java.awt.Color(255, 153, 51));
         jLabel5.setText("Time Duration   :");
         getContentPane().add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(750, 290, -1, -1));
 
-        jLabel4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/image/cox's3.jpg"))); // NOI18N
-        getContentPane().add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 40, -1, -1));
-
-        jLabel3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/image/cox's1.jpg"))); // NOI18N
-        getContentPane().add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 40, -1, -1));
-
-        jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/image/cox's5.jpg"))); // NOI18N
-        getContentPane().add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 40, 420, 310));
-
-        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/image/Cox's Bazar.jpg"))); // NOI18N
-        jLabel1.setText("jLabel1");
-        getContentPane().add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, -1, -1));
+        background.setIcon(new javax.swing.ImageIcon(getClass().getResource("/image/Cox's Bazar.jpg"))); // NOI18N
+        background.setText("jLabel1");
+        getContentPane().add(background, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, -1, -1));
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
     private void backMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_backMouseClicked
         // TODO add your handling code here:
-        HotPackage hot_pack = new HotPackage();
+        HotPackage hot_pack = new HotPackage(email);
         hot_pack.setVisible(true);
+        setVisible(false);
     }//GEN-LAST:event_backMouseClicked
+
+    private void addActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_addActionPerformed
+        // TODO add your handling code here:
+        String duration = durationValue.getText();
+        int cost = Integer.parseInt(costValue.getText());
+        String hotelName = hotelNameValue.getText();
+        
+        if (duration.equals("") || cost == 0 || hotelName.equals(""))
+            JOptionPane.showMessageDialog(null, "Every Field is Required");
+        else {
+            String getQuery = ("select * from users where email = '" + email + "';");
+            String findEmail = SelectUserQuery.getData(getQuery).getEmail();
+            
+            System.out.println(findEmail);
+
+            if (findEmail != null) {
+                User userInfo = SelectUserQuery.getData(getQuery);
+                
+                InsertBooked.insertBooked(userInfo.getEmail(), userInfo.getName(), userInfo.getPhone(), hotelName, duration, cost, hotelName+" booked successfully.");
+            } else {
+                login ln = new login();
+                JOptionPane.showMessageDialog(null, "please login first...");
+                setVisible(false);
+                ln.setVisible(true);
+            }
+        }
+    }//GEN-LAST:event_addActionPerformed
 
     /**
      * @param args the command line arguments
@@ -152,25 +206,28 @@ public class CoxHotPack extends javax.swing.JFrame {
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                new CoxHotPack().setVisible(true);
+                new CoxHotPack("").setVisible(true);
             }
         });
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton add;
     private javax.swing.JButton back;
-    private javax.swing.JButton jButton3;
-    private javax.swing.JButton jButton5;
-    private javax.swing.JButton jButton6;
-    private javax.swing.JLabel jLabel1;
-    private javax.swing.JLabel jLabel10;
-    private javax.swing.JLabel jLabel2;
-    private javax.swing.JLabel jLabel3;
-    private javax.swing.JLabel jLabel4;
+    private javax.swing.JLabel background;
+    private javax.swing.JButton backward;
+    private javax.swing.JLabel costValue;
+    private javax.swing.JLabel durationValue;
+    private javax.swing.JButton forward;
+    private javax.swing.JButton helloEmail;
+    private javax.swing.JLabel hotelNameValue;
     private javax.swing.JLabel jLabel5;
-    private javax.swing.JLabel jLabel6;
     private javax.swing.JLabel jLabel7;
-    private javax.swing.JLabel jLabel8;
     private javax.swing.JLabel jLabel9;
+    private javax.swing.JLabel picture1;
+    private javax.swing.JLabel picture2;
+    private javax.swing.JLabel picture3;
+    private javax.swing.JLabel picture4;
+    private javax.swing.JLabel picture5;
     // End of variables declaration//GEN-END:variables
 }

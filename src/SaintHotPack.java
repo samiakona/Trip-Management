@@ -1,3 +1,9 @@
+
+import javax.swing.JOptionPane;
+import model.User;
+import project.InsertBooked;
+import project.SelectUserQuery;
+
 /*
  * To change this license header, choose License Headers in Project Properties.
  * To change this template file, choose Tools | Templates
@@ -10,13 +16,16 @@
  */
 public class SaintHotPack extends javax.swing.JFrame {
 
-    /**
-     * Creates new form SaintHotPack
-     */
-    public SaintHotPack() {
-        initComponents();
-    }
+    String email;
 
+    /**
+     * Creates new form CoxHotPack
+     */
+    public SaintHotPack(String _email) {
+        initComponents();
+        this.email = _email;
+        helloEmail.setText("hello, "+email);      
+    }
     /**
      * This method is called from within the constructor to initialize the form.
      * WARNING: Do NOT modify this code. The content of this method is always
@@ -26,56 +35,85 @@ public class SaintHotPack extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+        helloEmail = new javax.swing.JButton();
+        picture5 = new javax.swing.JLabel();
+        picture4 = new javax.swing.JLabel();
+        picture3 = new javax.swing.JLabel();
+        picture2 = new javax.swing.JLabel();
+        picture1 = new javax.swing.JLabel();
         jLabel2 = new javax.swing.JLabel();
-        jLabel3 = new javax.swing.JLabel();
+        durationValue = new javax.swing.JLabel();
         jLabel4 = new javax.swing.JLabel();
-        jLabel5 = new javax.swing.JLabel();
+        costValue = new javax.swing.JLabel();
         jLabel6 = new javax.swing.JLabel();
-        jLabel7 = new javax.swing.JLabel();
-        jButton4 = new javax.swing.JButton();
+        hotelNameValue = new javax.swing.JLabel();
+        add = new javax.swing.JButton();
         back = new javax.swing.JButton();
-        jButton1 = new javax.swing.JButton();
-        jButton2 = new javax.swing.JButton();
-        jLabel1 = new javax.swing.JLabel();
+        backward = new javax.swing.JButton();
+        forward = new javax.swing.JButton();
+        background = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        helloEmail.setText("jButton1");
+        getContentPane().add(helloEmail, new org.netbeans.lib.awtextra.AbsoluteConstraints(1140, 20, -1, -1));
+
+        picture5.setIcon(new javax.swing.ImageIcon(getClass().getResource("/image/saintpic5.jpg"))); // NOI18N
+        getContentPane().add(picture5, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 70, -1, -1));
+
+        picture4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/image/saintpic4.jpg"))); // NOI18N
+        getContentPane().add(picture4, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 70, -1, -1));
+
+        picture3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/image/saintpic3.jpg"))); // NOI18N
+        getContentPane().add(picture3, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 70, -1, -1));
+
+        picture2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/image/saintpic2.jpg"))); // NOI18N
+        getContentPane().add(picture2, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 70, -1, -1));
+
+        picture1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/image/saintpic1.jpg"))); // NOI18N
+        getContentPane().add(picture1, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 70, -1, -1));
 
         jLabel2.setBackground(new java.awt.Color(0, 0, 0));
         jLabel2.setFont(new java.awt.Font("Times New Roman", 1, 24)); // NOI18N
         jLabel2.setText("Time Duration   :");
         getContentPane().add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(700, 420, -1, -1));
 
-        jLabel3.setBackground(new java.awt.Color(0, 0, 0));
-        jLabel3.setFont(new java.awt.Font("Times New Roman", 1, 24)); // NOI18N
-        jLabel3.setText("4 days, 3 Nights");
-        getContentPane().add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(910, 420, -1, -1));
+        durationValue.setBackground(new java.awt.Color(0, 0, 0));
+        durationValue.setFont(new java.awt.Font("Times New Roman", 1, 24)); // NOI18N
+        durationValue.setText("4 days, 3 Nights");
+        getContentPane().add(durationValue, new org.netbeans.lib.awtextra.AbsoluteConstraints(910, 420, -1, -1));
 
         jLabel4.setBackground(new java.awt.Color(0, 0, 0));
         jLabel4.setFont(new java.awt.Font("Times New Roman", 1, 24)); // NOI18N
         jLabel4.setText("Amount of Cost  :");
         getContentPane().add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(700, 470, -1, -1));
 
-        jLabel5.setBackground(new java.awt.Color(0, 0, 0));
-        jLabel5.setFont(new java.awt.Font("Times New Roman", 1, 24)); // NOI18N
-        jLabel5.setText("40,000 TK");
-        getContentPane().add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(910, 480, -1, -1));
+        costValue.setBackground(new java.awt.Color(0, 0, 0));
+        costValue.setFont(new java.awt.Font("Times New Roman", 1, 24)); // NOI18N
+        costValue.setText("40000");
+        getContentPane().add(costValue, new org.netbeans.lib.awtextra.AbsoluteConstraints(910, 480, -1, -1));
 
         jLabel6.setBackground(new java.awt.Color(0, 0, 0));
         jLabel6.setFont(new java.awt.Font("Times New Roman", 1, 24)); // NOI18N
         jLabel6.setText("Hotel Name        :");
         getContentPane().add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(700, 520, -1, -1));
 
-        jLabel7.setBackground(new java.awt.Color(0, 0, 0));
-        jLabel7.setFont(new java.awt.Font("Times New Roman", 1, 24)); // NOI18N
-        jLabel7.setText("La Playa Orient Bay");
-        getContentPane().add(jLabel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(910, 520, -1, -1));
+        hotelNameValue.setBackground(new java.awt.Color(0, 0, 0));
+        hotelNameValue.setFont(new java.awt.Font("Times New Roman", 1, 24)); // NOI18N
+        hotelNameValue.setText("La Playa Orient Bay");
+        getContentPane().add(hotelNameValue, new org.netbeans.lib.awtextra.AbsoluteConstraints(910, 520, -1, -1));
 
-        jButton4.setBackground(new java.awt.Color(0, 0, 0));
-        jButton4.setFont(new java.awt.Font("Times New Roman", 1, 24)); // NOI18N
-        jButton4.setForeground(new java.awt.Color(255, 255, 255));
-        jButton4.setText("Add");
-        getContentPane().add(jButton4, new org.netbeans.lib.awtextra.AbsoluteConstraints(950, 580, -1, -1));
+        add.setBackground(new java.awt.Color(0, 0, 0));
+        add.setFont(new java.awt.Font("Times New Roman", 1, 24)); // NOI18N
+        add.setForeground(new java.awt.Color(255, 255, 255));
+        add.setText("Add");
+        add.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                addActionPerformed(evt);
+            }
+        });
+        getContentPane().add(add, new org.netbeans.lib.awtextra.AbsoluteConstraints(950, 580, -1, -1));
 
         back.setBackground(new java.awt.Color(0, 0, 0));
         back.setFont(new java.awt.Font("Times New Roman", 1, 24)); // NOI18N
@@ -88,27 +126,55 @@ public class SaintHotPack extends javax.swing.JFrame {
         });
         getContentPane().add(back, new org.netbeans.lib.awtextra.AbsoluteConstraints(750, 580, -1, -1));
 
-        jButton1.setBackground(new java.awt.Color(0, 0, 0));
-        jButton1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/image/back.jpg"))); // NOI18N
-        getContentPane().add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 400, 100, 40));
+        backward.setBackground(new java.awt.Color(0, 0, 0));
+        backward.setIcon(new javax.swing.ImageIcon(getClass().getResource("/image/back.jpg"))); // NOI18N
+        getContentPane().add(backward, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 400, 100, 40));
 
-        jButton2.setBackground(new java.awt.Color(0, 0, 0));
-        jButton2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/image/forward.jpg"))); // NOI18N
-        getContentPane().add(jButton2, new org.netbeans.lib.awtextra.AbsoluteConstraints(290, 400, 100, 40));
+        forward.setBackground(new java.awt.Color(0, 0, 0));
+        forward.setIcon(new javax.swing.ImageIcon(getClass().getResource("/image/forward.jpg"))); // NOI18N
+        getContentPane().add(forward, new org.netbeans.lib.awtextra.AbsoluteConstraints(290, 400, 100, 40));
 
-        jLabel1.setBackground(new java.awt.Color(0, 0, 0));
-        jLabel1.setFont(new java.awt.Font("Times New Roman", 1, 24)); // NOI18N
-        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/image/Saintcover.jpg"))); // NOI18N
-        getContentPane().add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, -1, -1));
+        background.setBackground(new java.awt.Color(0, 0, 0));
+        background.setFont(new java.awt.Font("Times New Roman", 1, 24)); // NOI18N
+        background.setIcon(new javax.swing.ImageIcon(getClass().getResource("/image/Saintcover.jpg"))); // NOI18N
+        getContentPane().add(background, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, -1, -1));
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
     private void backMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_backMouseClicked
         // TODO add your handling code here:
-        HotPackage hot_pack = new HotPackage();
+        HotPackage hot_pack = new HotPackage(email);
         hot_pack.setVisible(true);
+        setVisible(false);
     }//GEN-LAST:event_backMouseClicked
+
+    private void addActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_addActionPerformed
+        // TODO add your handling code here:
+        String duration = durationValue.getText();
+        int cost = Integer.parseInt(costValue.getText());
+        String hotelName = hotelNameValue.getText();
+        
+        if (duration.equals("") || cost == 0 || hotelName.equals(""))
+            JOptionPane.showMessageDialog(null, "Every Field is Required");
+        else {
+            String getQuery = ("select * from users where email = '" + email + "';");
+            String findEmail = SelectUserQuery.getData(getQuery).getEmail();
+            
+            System.out.println(findEmail);
+
+            if (findEmail != null) {
+                User userInfo = SelectUserQuery.getData(getQuery);
+                
+                InsertBooked.insertBooked(userInfo.getEmail(), userInfo.getName(), userInfo.getPhone(), hotelName, duration, cost, hotelName+" booked successfully.");
+            } else {
+                login ln = new login();
+                JOptionPane.showMessageDialog(null, "please login first...");
+                setVisible(false);
+                ln.setVisible(true);
+            }
+        }
+    }//GEN-LAST:event_addActionPerformed
 
     /**
      * @param args the command line arguments
@@ -140,22 +206,28 @@ public class SaintHotPack extends javax.swing.JFrame {
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                new SaintHotPack().setVisible(true);
+                new SaintHotPack("").setVisible(true);
             }
         });
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton add;
     private javax.swing.JButton back;
-    private javax.swing.JButton jButton1;
-    private javax.swing.JButton jButton2;
-    private javax.swing.JButton jButton4;
-    private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel background;
+    private javax.swing.JButton backward;
+    private javax.swing.JLabel costValue;
+    private javax.swing.JLabel durationValue;
+    private javax.swing.JButton forward;
+    private javax.swing.JButton helloEmail;
+    private javax.swing.JLabel hotelNameValue;
     private javax.swing.JLabel jLabel2;
-    private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
-    private javax.swing.JLabel jLabel5;
     private javax.swing.JLabel jLabel6;
-    private javax.swing.JLabel jLabel7;
+    private javax.swing.JLabel picture1;
+    private javax.swing.JLabel picture2;
+    private javax.swing.JLabel picture3;
+    private javax.swing.JLabel picture4;
+    private javax.swing.JLabel picture5;
     // End of variables declaration//GEN-END:variables
 }

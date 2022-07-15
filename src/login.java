@@ -1,7 +1,7 @@
 
 import javax.swing.JOptionPane;
 import project.InsertUpdateDelete;
-import project.SelectQuery;
+import project.SelectUserQuery;
 
 /*
  * To change this license header, choose License Headers in Project Properties.
@@ -158,17 +158,19 @@ public class login extends javax.swing.JFrame {
             String getQuery;
             
             getQuery = ("select * from users where email = '" + email + "' and password = '" + password + "';");
-            int numOfValues = SelectQuery.getData(getQuery).size();
-            System.out.println(numOfValues);
-            
-            if (numOfValues > 0) {
+            String findEmail = SelectUserQuery.getData(getQuery).getEmail();
+            System.out.println(findEmail);
+            login ln = new login();
+
+            if (findEmail != null) {
                 JOptionPane.showMessageDialog(null, email+" Login Successfully.");
-                HomePage hp = new HomePage();
+                HomePage hp = new HomePage(email);
+                hp.email = email;
                 hp.setVisible(true);
+                setVisible(false);
             } else {
                 JOptionPane.showMessageDialog(null, email+" don't have any account.");
                 setVisible(false);
-                login ln = new login();
                 ln.setVisible(true);
             }
         }

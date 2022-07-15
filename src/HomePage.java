@@ -1,3 +1,6 @@
+
+import javax.swing.JFrame;
+
 /*
  * To change this license header, choose License Headers in Project Properties.
  * To change this template file, choose Tools | Templates
@@ -9,12 +12,15 @@
  * @author USer
  */
 public class HomePage extends javax.swing.JFrame {
+    String email;
 
     /**
      * Creates new form HomePage
      */
-    public HomePage() {
+    public HomePage(String _email) {
         initComponents();
+        this.email = _email;
+        helloemail.setText("hello, "+email);
     }
 
     /**
@@ -26,23 +32,32 @@ public class HomePage extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+        helloemail = new javax.swing.JButton();
         jLabel2 = new javax.swing.JLabel();
-        jLabel3 = new javax.swing.JLabel();
         hot_package = new javax.swing.JButton();
         trip_forerign = new javax.swing.JButton();
         make_own_trip = new javax.swing.JButton();
-        jButton6 = new javax.swing.JButton();
+        setting = new javax.swing.JButton();
         classic_package = new javax.swing.JButton();
-        jButton2 = new javax.swing.JButton();
-        jLabel1 = new javax.swing.JLabel();
+        premium = new javax.swing.JButton();
+        background = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
+        helloemail.setText("Hello");
+        helloemail.addInputMethodListener(new java.awt.event.InputMethodListener() {
+            public void caretPositionChanged(java.awt.event.InputMethodEvent evt) {
+            }
+            public void inputMethodTextChanged(java.awt.event.InputMethodEvent evt) {
+                helloemailInputMethodTextChanged(evt);
+            }
+        });
+        getContentPane().add(helloemail, new org.netbeans.lib.awtextra.AbsoluteConstraints(1080, 50, -1, -1));
+
         jLabel2.setFont(new java.awt.Font("Times New Roman", 1, 48)); // NOI18N
         jLabel2.setText("Home Page");
         getContentPane().add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(670, 70, -1, -1));
-        getContentPane().add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(620, 190, -1, -1));
 
         hot_package.setBackground(new java.awt.Color(0, 0, 0));
         hot_package.setIcon(new javax.swing.ImageIcon(getClass().getResource("/image/hot-package-logo-symbol-icon-260nw-1796112262.jpg"))); // NOI18N
@@ -55,6 +70,11 @@ public class HomePage extends javax.swing.JFrame {
 
         trip_forerign.setBackground(new java.awt.Color(0, 0, 0));
         trip_forerign.setIcon(new javax.swing.ImageIcon(getClass().getResource("/image/new.jpg"))); // NOI18N
+        trip_forerign.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                trip_forerignActionPerformed(evt);
+            }
+        });
         getContentPane().add(trip_forerign, new org.netbeans.lib.awtextra.AbsoluteConstraints(300, 380, 140, -1));
 
         make_own_trip.setBackground(new java.awt.Color(0, 0, 0));
@@ -66,9 +86,9 @@ public class HomePage extends javax.swing.JFrame {
         });
         getContentPane().add(make_own_trip, new org.netbeans.lib.awtextra.AbsoluteConstraints(640, 380, 140, -1));
 
-        jButton6.setBackground(new java.awt.Color(0, 0, 0));
-        jButton6.setIcon(new javax.swing.ImageIcon(getClass().getResource("/image/Setting.jpg"))); // NOI18N
-        getContentPane().add(jButton6, new org.netbeans.lib.awtextra.AbsoluteConstraints(1010, 380, 140, -1));
+        setting.setBackground(new java.awt.Color(0, 0, 0));
+        setting.setIcon(new javax.swing.ImageIcon(getClass().getResource("/image/Setting.jpg"))); // NOI18N
+        getContentPane().add(setting, new org.netbeans.lib.awtextra.AbsoluteConstraints(1010, 380, 140, -1));
 
         classic_package.setBackground(new java.awt.Color(0, 0, 0));
         classic_package.setIcon(new javax.swing.ImageIcon(getClass().getResource("/image/classic.jpg"))); // NOI18N
@@ -79,20 +99,21 @@ public class HomePage extends javax.swing.JFrame {
         });
         getContentPane().add(classic_package, new org.netbeans.lib.awtextra.AbsoluteConstraints(640, 150, 140, 150));
 
-        jButton2.setBackground(new java.awt.Color(0, 0, 0));
-        jButton2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/image/premium.jpg"))); // NOI18N
-        getContentPane().add(jButton2, new org.netbeans.lib.awtextra.AbsoluteConstraints(1010, 160, 140, 150));
+        premium.setBackground(new java.awt.Color(0, 0, 0));
+        premium.setIcon(new javax.swing.ImageIcon(getClass().getResource("/image/premium.jpg"))); // NOI18N
+        getContentPane().add(premium, new org.netbeans.lib.awtextra.AbsoluteConstraints(1010, 160, 140, 150));
 
-        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/image/Homepage.jpg"))); // NOI18N
-        getContentPane().add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, -1, -1));
+        background.setIcon(new javax.swing.ImageIcon(getClass().getResource("/image/Homepage.jpg"))); // NOI18N
+        getContentPane().add(background, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 0, -1, -1));
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
     private void hot_packageActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_hot_packageActionPerformed
         // TODO add your handling code here:
-        HotPackage hot_package = new HotPackage();
+        HotPackage hot_package = new HotPackage(email);
         hot_package.setVisible(true);
+        setVisible(false);
     }//GEN-LAST:event_hot_packageActionPerformed
 
     private void classic_packageActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_classic_packageActionPerformed
@@ -103,6 +124,15 @@ public class HomePage extends javax.swing.JFrame {
     private void make_own_tripActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_make_own_tripActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_make_own_tripActionPerformed
+
+    private void trip_forerignActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_trip_forerignActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_trip_forerignActionPerformed
+
+    private void helloemailInputMethodTextChanged(java.awt.event.InputMethodEvent evt) {//GEN-FIRST:event_helloemailInputMethodTextChanged
+        // TODO add your handling code here:
+        helloemail.setText(email);
+    }//GEN-LAST:event_helloemailInputMethodTextChanged
 
     /**
      * @param args the command line arguments
@@ -130,24 +160,24 @@ public class HomePage extends javax.swing.JFrame {
             java.util.logging.Logger.getLogger(HomePage.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
         //</editor-fold>
-
+        
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                new HomePage().setVisible(true);
+                new HomePage("").setVisible(true);
             }
         });
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JLabel background;
     private javax.swing.JButton classic_package;
+    private javax.swing.JButton helloemail;
     private javax.swing.JButton hot_package;
-    private javax.swing.JButton jButton2;
-    private javax.swing.JButton jButton6;
-    private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
-    private javax.swing.JLabel jLabel3;
     private javax.swing.JButton make_own_trip;
+    private javax.swing.JButton premium;
+    private javax.swing.JButton setting;
     private javax.swing.JButton trip_forerign;
     // End of variables declaration//GEN-END:variables
 }
