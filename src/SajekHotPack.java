@@ -165,8 +165,9 @@ public class SajekHotPack extends javax.swing.JFrame {
             } else {
                 login ln = new login();
                 JOptionPane.showMessageDialog(null, "please login first...");
-                setVisible(false);
                 ln.setVisible(true);
+                setVisible(false);
+
             }
         }
     }//GEN-LAST:event_addActionPerformed

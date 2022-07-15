@@ -188,6 +188,7 @@ public class signup extends javax.swing.JFrame {
         // TODO add your handling code here:
         login ln = new login();
         ln.setVisible(true);
+        setVisible(false);
     }//GEN-LAST:event_loginMouseClicked
 
     /**

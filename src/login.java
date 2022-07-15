@@ -187,6 +187,7 @@ public class login extends javax.swing.JFrame {
         // TODO add your handling code here:
         signup su = new signup();
         su.setVisible(true);
+        setVisible(false);
     }//GEN-LAST:event_jButton2MouseClicked
 
     /**
