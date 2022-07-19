@@ -9,6 +9,7 @@
  * @author USer
  */
 public class HotPackage extends javax.swing.JFrame {
+
     String email;
 
     /**
@@ -17,7 +18,7 @@ public class HotPackage extends javax.swing.JFrame {
     public HotPackage(String _email) {
         initComponents();
         this.email = _email;
-        helloEmail.setText("hello, "+email);
+        helloEmail.setText("Hello, " + email);
     }
 
     /**
@@ -36,11 +37,16 @@ public class HotPackage extends javax.swing.JFrame {
         sundarban_hot_pack = new javax.swing.JButton();
         bandarban_hot_pack = new javax.swing.JButton();
         sajek_hot_pack = new javax.swing.JButton();
+        back = new javax.swing.JButton();
         background_cover = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setUndecorated(true);
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
+        helloEmail.setBackground(new java.awt.Color(0, 0, 0));
+        helloEmail.setFont(new java.awt.Font("Times New Roman", 0, 18)); // NOI18N
+        helloEmail.setForeground(new java.awt.Color(255, 255, 255));
         helloEmail.setText("jButton1");
         helloEmail.addInputMethodListener(new java.awt.event.InputMethodListener() {
             public void caretPositionChanged(java.awt.event.InputMethodEvent evt) {
@@ -49,7 +55,7 @@ public class HotPackage extends javax.swing.JFrame {
                 helloEmailInputMethodTextChanged(evt);
             }
         });
-        getContentPane().add(helloEmail, new org.netbeans.lib.awtextra.AbsoluteConstraints(1320, 30, -1, -1));
+        getContentPane().add(helloEmail, new org.netbeans.lib.awtextra.AbsoluteConstraints(1160, 50, -1, -1));
 
         cox_hot_pack.setBackground(new java.awt.Color(0, 0, 0));
         cox_hot_pack.setIcon(new javax.swing.ImageIcon(getClass().getResource("/image/cox's button.jpg"))); // NOI18N
@@ -105,6 +111,17 @@ public class HotPackage extends javax.swing.JFrame {
         });
         getContentPane().add(sajek_hot_pack, new org.netbeans.lib.awtextra.AbsoluteConstraints(860, 430, 140, -1));
 
+        back.setBackground(new java.awt.Color(0, 0, 0));
+        back.setFont(new java.awt.Font("Times New Roman", 1, 18)); // NOI18N
+        back.setForeground(new java.awt.Color(255, 255, 255));
+        back.setText("Back");
+        back.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                backActionPerformed(evt);
+            }
+        });
+        getContentPane().add(back, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 40, -1, -1));
+
         background_cover.setIcon(new javax.swing.ImageIcon(getClass().getResource("/image/Hotpackage.jpg"))); // NOI18N
         background_cover.setText("jLabel1");
         getContentPane().add(background_cover, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, -1, -1));
@@ -158,6 +175,11 @@ public class HotPackage extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_helloEmailInputMethodTextChanged
 
+    private void backActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_backActionPerformed
+        // TODO add your handling code here:
+     
+    }//GEN-LAST:event_backActionPerformed
+
     /**
      * @param args the command line arguments
      */
@@ -194,6 +216,7 @@ public class HotPackage extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton back;
     private javax.swing.JLabel background_cover;
     private javax.swing.JButton bandarban_hot_pack;
     private javax.swing.JButton cox_hot_pack;

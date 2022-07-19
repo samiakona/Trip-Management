@@ -35,16 +35,18 @@ public class HomePage extends javax.swing.JFrame {
         helloemail = new javax.swing.JButton();
         jLabel2 = new javax.swing.JLabel();
         hot_package = new javax.swing.JButton();
-        trip_forerign = new javax.swing.JButton();
         make_own_trip = new javax.swing.JButton();
         setting = new javax.swing.JButton();
         classic_package = new javax.swing.JButton();
         premium = new javax.swing.JButton();
+        back = new javax.swing.JButton();
         background = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
+        helloemail.setBackground(new java.awt.Color(0, 0, 0));
+        helloemail.setForeground(new java.awt.Color(255, 255, 255));
         helloemail.setText("Hello");
         helloemail.addInputMethodListener(new java.awt.event.InputMethodListener() {
             public void caretPositionChanged(java.awt.event.InputMethodEvent evt) {
@@ -68,15 +70,6 @@ public class HomePage extends javax.swing.JFrame {
         });
         getContentPane().add(hot_package, new org.netbeans.lib.awtextra.AbsoluteConstraints(310, 150, 140, -1));
 
-        trip_forerign.setBackground(new java.awt.Color(0, 0, 0));
-        trip_forerign.setIcon(new javax.swing.ImageIcon(getClass().getResource("/image/new.jpg"))); // NOI18N
-        trip_forerign.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                trip_forerignActionPerformed(evt);
-            }
-        });
-        getContentPane().add(trip_forerign, new org.netbeans.lib.awtextra.AbsoluteConstraints(300, 380, 140, -1));
-
         make_own_trip.setBackground(new java.awt.Color(0, 0, 0));
         make_own_trip.setIcon(new javax.swing.ImageIcon(getClass().getResource("/image/make ur own.jpg"))); // NOI18N
         make_own_trip.addActionListener(new java.awt.event.ActionListener() {
@@ -84,11 +77,11 @@ public class HomePage extends javax.swing.JFrame {
                 make_own_tripActionPerformed(evt);
             }
         });
-        getContentPane().add(make_own_trip, new org.netbeans.lib.awtextra.AbsoluteConstraints(640, 380, 140, -1));
+        getContentPane().add(make_own_trip, new org.netbeans.lib.awtextra.AbsoluteConstraints(480, 380, 140, -1));
 
         setting.setBackground(new java.awt.Color(0, 0, 0));
         setting.setIcon(new javax.swing.ImageIcon(getClass().getResource("/image/Setting.jpg"))); // NOI18N
-        getContentPane().add(setting, new org.netbeans.lib.awtextra.AbsoluteConstraints(1010, 380, 140, -1));
+        getContentPane().add(setting, new org.netbeans.lib.awtextra.AbsoluteConstraints(850, 380, 140, -1));
 
         classic_package.setBackground(new java.awt.Color(0, 0, 0));
         classic_package.setIcon(new javax.swing.ImageIcon(getClass().getResource("/image/classic.jpg"))); // NOI18N
@@ -103,8 +96,14 @@ public class HomePage extends javax.swing.JFrame {
         premium.setIcon(new javax.swing.ImageIcon(getClass().getResource("/image/premium.jpg"))); // NOI18N
         getContentPane().add(premium, new org.netbeans.lib.awtextra.AbsoluteConstraints(1010, 160, 140, 150));
 
+        back.setBackground(new java.awt.Color(0, 0, 0));
+        back.setFont(new java.awt.Font("Times New Roman", 0, 18)); // NOI18N
+        back.setForeground(new java.awt.Color(255, 255, 255));
+        back.setText("Back");
+        getContentPane().add(back, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 30, -1, -1));
+
         background.setIcon(new javax.swing.ImageIcon(getClass().getResource("/image/Homepage.jpg"))); // NOI18N
-        getContentPane().add(background, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 0, -1, -1));
+        getContentPane().add(background, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, -1, -1));
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
@@ -123,11 +122,10 @@ public class HomePage extends javax.swing.JFrame {
 
     private void make_own_tripActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_make_own_tripActionPerformed
         // TODO add your handling code here:
+        MakeYourOwnTrip make_own_trip = new MakeYourOwnTrip(email);
+        make_own_trip.setVisible(true);
+        setVisible(false);
     }//GEN-LAST:event_make_own_tripActionPerformed
-
-    private void trip_forerignActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_trip_forerignActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_trip_forerignActionPerformed
 
     private void helloemailInputMethodTextChanged(java.awt.event.InputMethodEvent evt) {//GEN-FIRST:event_helloemailInputMethodTextChanged
         // TODO add your handling code here:
@@ -170,6 +168,7 @@ public class HomePage extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton back;
     private javax.swing.JLabel background;
     private javax.swing.JButton classic_package;
     private javax.swing.JButton helloemail;
@@ -178,6 +177,5 @@ public class HomePage extends javax.swing.JFrame {
     private javax.swing.JButton make_own_trip;
     private javax.swing.JButton premium;
     private javax.swing.JButton setting;
-    private javax.swing.JButton trip_forerign;
     // End of variables declaration//GEN-END:variables
 }
